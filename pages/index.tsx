@@ -18,7 +18,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [messageState, setMessageState] = useState<{ messages: Message[], pending?: string, history: [string, string][] }>({
     messages: [{
-      "message": "Hi there! How can I help?",
+      "message": "The name is Friedrich. Philosophaster! Ask me anything.",
       "type": "apiMessage"
     }],
     history: []
@@ -126,12 +126,12 @@ export default function Home() {
           <Link href="/">Nietzsche Bot.</Link>
         </div>
         <div className = {styles.navlinks}>
-         <a
+        <a
             href="https://www.pearstop.com"
             target="_blank"
             rel="noreferrer"
           >
-             Find more on Pearstop.com
+              <img src="/icon.png" height="50px"></img> 
           </a>
         </div>
       </div>

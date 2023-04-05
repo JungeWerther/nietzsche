@@ -15,7 +15,9 @@ body {
 
 body {
   color: snow;
-  background: #070809;
+  /* background: #070809; */
+  background: linear-gradient(0deg, rgba(143, 143, 143, 0.5), rgba(143, 143, 143, 0.5)), radial-gradient(44.23% 116.13% at 27.65% 78.34%, rgba(122, 255, 247, 0.2) 0%, rgba(169, 255, 250, 0.2) 35.01%, rgba(255, 255, 255, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(71.13% 250.47% at 0% 0%, #1AA3F0 0%, rgba(26, 163, 240, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
 }
 
 a {
