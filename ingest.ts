@@ -3,9 +3,13 @@ import { OpenAIEmbeddings } from "langchain/embeddings";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import * as fs from "fs";
 import { Document } from "langchain/document";
-import { BaseDocumentLoader } from "langchain/document_loaders";
+import { CustomPDFLoader } from '@/utils/customPDFLoader';
+import { BaseDocumentLoader, TextLoader, DirectoryLoader } from "langchain/document_loaders";
 import path from "path";
 import { load } from "cheerio";
+
+/* Name of directory to retrieve your files from */
+const filePath = 'docs';
 
 async function processFile(filePath: string): Promise<Document> {
   return await new Promise<Document>((resolve, reject) => {
@@ -62,7 +66,19 @@ const directoryPath = "langchain.readthedocs.io";
 const loader = new ReadTheDocsLoader(directoryPath);
 
 export const run = async () => {
-  const rawDocs = await loader.load();
+   /*load raw docs from the all files in the directory */
+   const directoryLoader = new DirectoryLoader(filePath, {
+    '.pdf': (path) => new CustomPDFLoader(path),
+    '.txt': (path) => new TextLoader(path),
+    '.tsx': (path) => new TextLoader(path),
+    '.cjs': (path) => new TextLoader(path),
+    '.js': (path) => new TextLoader(path),
+    '.ts': (path) => new TextLoader(path),
+    '.md': (path) => new TextLoader(path),
+  });
+
+  // const loader = new PDFLoader(filePath);
+  const rawDocs = await directoryLoader.load();
   console.log("Loader created.");
   /* Split the text into chunks */
   const textSplitter = new RecursiveCharacterTextSplitter({
@@ -82,3 +98,8 @@ export const run = async () => {
   await run();
   console.log("done");
 })();
+
+
+
+
+

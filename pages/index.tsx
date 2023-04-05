@@ -123,22 +123,15 @@ export default function Home() {
       </Head>
       <div className={styles.topnav}>
         <div className = {styles.navlogo}>
-          <Link href="/">LangChain</Link>
+          <Link href="/">Nietzsche Bot.</Link>
         </div>
         <div className = {styles.navlinks}>
-          <a
-            href="https://langchain.readthedocs.io/en/latest/"
+         <a
+            href="https://www.pearstop.com"
             target="_blank"
             rel="noreferrer"
           >
-            Docs
-          </a>
-          <a
-            href="https://github.com/zahidkhawaja/langchain-chat-nextjs"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
+             Find more on Pearstop.com
           </a>
         </div>
       </div>
@@ -207,9 +200,8 @@ export default function Home() {
             </form>
           </div>
           <div className = {styles.footer}>
-            <p>Powered by <a href="https://github.com/hwchase17/langchain" target="_blank" rel="noreferrer">
-                LangChain
-              </a>. Built by <a href="https://twitter.com/chillzaza_" target="_blank" rel="noreferrer">Zahid</a> and <a href="https://twitter.com/_seanyneutron" target="_blank" rel="noreferrer">Sean</a>.</p>
+            <p>Powered by Pearstop and <a href="https://github.com/hwchase17/langchain" target="_blank" rel="noreferrer">
+                LangChain</a></p>
           </div>
         </div>
       </main>
