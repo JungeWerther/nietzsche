@@ -16,7 +16,7 @@
     "@emotion/styled": "^11.10.5",
     "@microsoft/fetch-event-source": "^2.0.1",
     "@mui/material": "^5.11.4",
-    "@next/font": "13.1.6",
+    "@next/font": "13.3.0",
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.0.3",
     "eslint": "8.34.0",
