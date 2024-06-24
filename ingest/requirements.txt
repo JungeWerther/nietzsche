@@ -2,3 +2,6 @@ langchain
 bs4
 pandas
 unstructured
+joblib>=1.1.1 # not directly required, pinned by Snyk to avoid a vulnerability
+nltk>=3.8.1 # not directly required, pinned by Snyk to avoid a vulnerability
+tqdm>=4.66.3 # not directly required, pinned by Snyk to avoid a vulnerability
